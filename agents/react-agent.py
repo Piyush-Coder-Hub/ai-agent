@@ -34,6 +34,7 @@ tools = {
 
 # -------------------- LLM --------------------
 llm = ChatOllama(model="llama3.1", temperature=0.7)
+#.bind_tools(tool)  It is not supported by llama3 use gpt-4.1-mini. So calling it manually using  detect_tool_call
 
 # -------------------- Tool Detection --------------------
 def detect_tool_call(text: str):
